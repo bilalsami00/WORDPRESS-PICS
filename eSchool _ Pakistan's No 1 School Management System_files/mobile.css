@@ -1,0 +1,240 @@
+
+@media all and (max-width : 720px) 
+{
+	header section.top span
+	{
+		display  :  none;
+	}
+	
+	footer section summary img
+	{
+		float    :  none;
+		display  :  block;
+		margin   :  0px 0px 20px 0px;
+	}
+	
+	.grid .grid-sizer, .grid .grid-item
+	{
+		width  :  100%;
+	}
+}
+
+@media all and (max-width : 640px)
+{
+	header section.navLogo
+	{
+	  padding  :  30px 20px 30px 20px;
+	}
+	
+	header.fixed section.navLogo
+	{
+	  padding  :  20px;
+	}
+	
+	header div.mobile
+	{
+		top  :  30px;
+	}
+	
+	
+	footer #Quote
+	{
+		font-size    :  36px;
+		line-height  :  28px;
+	}
+	
+	footer #Quote small
+	{
+		font-size    :  14px;
+		line-height  :  12px;
+	}
+	
+	footer #Quote a.button, footer #Quote a.button:hover
+	{
+		font-size  :  21px;
+		padding    :  18px 32px 18px 32px;
+	}
+	
+	footer section ul li, footer section ul li:first-child, footer section ul li:last-child
+	{
+		width       :  100%;
+		text-align  :  left;
+	}
+	
+	footer section ul li:nth-child(2), footer section ul li:last-child
+	{
+		margin-top  :  20px;
+	}
+	
+	footer section ul li:nth-child(2)
+	{
+		text-align  :  left;
+	}
+	
+	footer section ul li:last-child
+	{
+		display  :  block;
+	}
+	
+	footer nav
+	{
+		display  :  none;
+	}
+	
+	section#Intro h1
+	{
+		font-size  :  30px;
+	}
+	
+	section#Services ul li a.icon, section#Services ul li a.icon:hover
+	{
+		margin  :  0px 20px 30px 0px;
+	}
+	
+	
+	section.text.home img
+	{
+	  float      :  none;
+	  margin     :  0px 10% 30px 10%;
+	  max-width  :  80%;
+	  width      :  80%;
+	}
+	
+	section.text h1
+	{
+		font-size  :  36px;
+	}
+	
+	section.text p
+	{
+		font-size    :  16px;
+		line-height  :  24px;
+	}
+	
+	
+	section.text.aboutUs div td
+	{
+		display  :  block;
+		clear    :  both;
+		width    :  auto;
+	}
+	
+	section.text.aboutUs div td img
+	{
+		max-width  :  60%;
+		margin     :  20px 0px 20px 0px;
+	}
+}
+
+
+@media all and (max-width : 480px)
+{
+	header section.navLogo a img
+	{
+		width   :  206px;
+		margin  :  5px 0px 0px 0px;
+	}
+	
+	
+	footer #Quote
+	{
+		font-size    :  27px;
+		line-height  :  24px;
+	}
+	
+	footer #Quote small
+	{
+		font-size    :  13px;
+		line-height  :  12px;
+	}
+	
+	footer #Quote a.button, footer #Quote a.button:hover
+	{
+		font-size  :  18px;
+		padding    :  18px 27px 18px 27px;
+	}
+	
+	section#Services ul li a.icon, section#Services ul li a.icon:hover
+	{
+		margin  :  0px 20px 5px 0px;
+	}
+
+	
+	section#Intro img
+	{
+		display  :  none;
+	}
+	
+	section#Intro h1
+	{
+		margin-bottom  :  20px;
+	}
+}
+
+
+@media all and (max-width : 380px)
+{
+	header section.top ul li:last-child
+	{
+		display  :  none;
+	}
+	
+	header section.navLogo
+	{
+	  padding  :  25px 20px 25px 20px;
+	}
+
+	header section.navLogo a img
+	{
+		width   :  160px;
+		margin  :  3px 0px 0px 0px;
+	}
+	
+	header div.mobile
+	{
+		top    :  18px;
+		right  :  20px;
+	}
+
+	
+	header.fixed section.navLogo
+	{
+	  padding  :  20px;
+	}
+	
+	header.fixed div.mobile
+	{
+		top    :  12px;
+		right  :  15px;
+	}
+	
+	
+	footer #Quote
+	{
+		font-size    :  21px;
+		line-height  :  18px;
+	}
+	
+	footer #Quote small
+	{
+		font-size    :  11px;
+		line-height  :  8px;
+	}
+	
+	footer #Quote a.button, footer #Quote a.button:hover
+	{
+		font-size  :  18px;
+		padding    :  15px 24px 15px 24px;
+	}
+	
+
+	section#Services ul li a.icon, section#Services ul li a.icon:hover
+	{
+		margin  :  0px 20px 10px 0px;
+	}
+	
+	section#Services ul li p
+	{
+		clear  :  both;
+	}
+}

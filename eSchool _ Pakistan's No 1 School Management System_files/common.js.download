@@ -1,0 +1,298 @@
+
+/*********************************************************************************************\
+***********************************************************************************************
+**                                                                                           **
+**  eSchool                                                                                  **
+**  Version 2.0                                                                              **
+**                                                                                           **
+**  http://www.eschool.pk                                                                    **
+**                                                                                           **
+**  Copyright 2005-19 (C) SW3 Solutions                                                      **
+**  http://www.sw3solutions.com                                                              **
+**                                                                                           **
+**  ***************************************************************************************  **
+**                                                                                           **
+**  Project Manager:                                                                         **
+**                                                                                           **
+**      Name  :  Muhammad Tahir Shahzad                                                      **
+**      Email :  mtshahzad@sw3solutions.com                                                  **
+**      Phone :  +92 333 456 0482                                                            **
+**      URL   :  http://www.mtshahzad.com                                                    **
+**                                                                                           **
+***********************************************************************************************
+\*********************************************************************************************/
+
+$(document).ready(function( )
+{
+	setTimeout(function( ) 
+	{
+		if ($("#PageMsg").length > 0)
+			$("#PageMsg").effect("fade", {}, 1000, function( ) { $("#PageMsg").slideUp(1000); }); 	
+	}, 10000);
+
+
+	$(document).on("click", ".alert, .info, .success, .error", function( )
+	{
+		if (!$(this).hasClass("noHide"))
+			$(this).effect("fade", {}, 1000, function( ) { $(this).slideUp(1000); });
+
+		return false;
+	});
+
+
+	$("header nav li").hover(function( )
+	{
+		if ($("ul", this).css("display") == "none")
+			$("ul", this).slideDown(150);
+	}, 
+
+	function( )
+	{
+		if ($("ul", this).css("display") == "block")
+			$("ul", this).slideUp(150);
+	});
+	
+	
+	$("header nav ul.main > li").each(function( )
+	{
+		if ($(this).find("a").eq(0).hasClass("selected"))
+			$(this).addClass("selected");
+	});
+	
+	
+	$("header nav ul li ul").hover(function( )
+	{
+		$(this).parent( ).find("a").eq(0).addClass("active");
+	}, 
+
+	function( )
+	{
+		$(this).parent( ).find("a").eq(0).removeClass("active");
+	});
+	
+
+	
+	var sNavHtml = "";
+	
+	$("header nav ul.main > li").each(function( )
+	{
+		sNavHtml = ("<li>" + $(this).html( ) + "</li>" + sNavHtml);
+	});
+
+	$("aside.nav").html("<div>eSchool.pk <i class='fa fa-times'></i></div><ul>" + sNavHtml + "</ul>");
+	
+
+	
+	$(document).on("click", "header .mobile", function( )
+	{
+		if ($("aside.nav").css("display") != "block")
+			$("aside.nav").show("slide", { direction: "right" }, 500);
+
+		return false;
+	});
+
+
+	$(document).on("click", "header, main, footer, section, aside.nav div i", function( )
+	{
+		if ($("aside.nav").css("display") == "block")
+		{
+			if ($("aside.nav").css("display") == "block")
+				$("aside.nav").hide("slide", { direction: "right" }, 500);
+
+			return false;
+		}
+	});
+
+
+	// Scroll back to top
+	$("#BackToTop").hide( );
+
+	$(window).scroll(function( )
+	{
+		if ($(this).scrollTop( ) > 100)
+			$('#BackToTop').fadeIn( );
+
+		else
+			$('#BackToTop').fadeOut( );
+		
+		
+		if ($(window).scrollTop( ) > 165)
+		{
+			$("header").addClass("fixed");		
+			$("body").css("padding-top", "167px");
+		}
+		
+		else
+		{
+			$("header").removeClass("fixed");		
+			$("body").css("padding-top", "0px");
+		}
+	});
+
+	
+	$("#BackToTop").click(function( )
+	{
+		$('body,html').animate({ scrollTop:0 }, 800);
+	});
+	
+		
+	if ($("#MasterSlider").length == 1)
+	{
+		$("#MasterSlider").masterslider(
+		{
+			width               :  1400,
+			height              :  600,
+			minHeight           :  0,
+			space               :  0,
+			start               :  1,
+			grabCursor          :  true,
+			swipe               :  true,
+			mouse               :  true,
+			keyboard            :  false,
+			layout              :  "fullwidth",
+			wheel               :  false,
+			autoplay            :  true,
+			instantStartLayers  :  true,
+			loop                :  true,
+			shuffle             :  false,
+			preload             :  1,
+			heightLimit         :  true,
+			autoHeight          :  false,
+			smoothHeight        :  true,
+			endPause            :  false,
+			overPause           :  true,
+			fillMode            :  "fill",
+			centerControls      :  false,
+			startOnAppear       :  false,
+			layersMode          :  "center",
+			autofillTarget      :  "",
+			hideLayers          :  false,
+			fullscreenMargin    :  0,
+			speed               :  30,
+			dir                 :  "h",
+			parallaxMode        :  "mouse",
+			view                :  "basic",
+						
+			controls            :
+			{
+				arrows   :  {  autohide:true, overVideo:true  },
+				bullets  :  {  autohide:true, overVideo:true, dir:'h', align:'bottom', space:6, margin:10  },
+				timebar  :  {  autohide:false, overVideo:true, align:'bottom', color:'#e77817', width:5 }
+			}
+		});		
+	}
+	
+	
+	
+	if ($("#TestimonialsSlider").length == 1)
+	{
+		$("#TestimonialsSlider").masterslider(
+		{
+			width               :  1000,
+			height              :  60,
+			minHeight           :  0,
+			space               :  0,
+			start               :  1,
+			grabCursor          :  true,
+			swipe               :  true,
+			mouse               :  true,
+			keyboard            :  false,
+			layout              :  "fillwidth",
+			wheel               :  false,
+			autoplay            :  true,
+			instantStartLayers  :  true,
+			loop                :  true,
+			shuffle             :  false,
+			preload             :  0,
+			heightLimit         :  true,
+			autoHeight          :  true,
+			smoothHeight        :  true,
+			endPause            :  true,
+			overPause           :  true,
+			fillMode            :  "fill",
+			centerControls      :  false,
+			startOnAppear       :  false,
+			layersMode          :  "center",
+			autofillTarget      :  "",
+			hideLayers          :  false,
+			fullscreenMargin    :  0,
+			speed               :  20,
+			dir                 :  "h",
+			parallaxMode        :  "swipe",
+			view                :  "scale",
+						
+			controls            :
+			{
+				arrows   :  {  autohide:true, overVideo:true, hideUnder:1140  },
+				bullets  :  {  autohide:true, overVideo:true, dir:'h', align:'bottom', space:6, margin:-40  }
+			}
+		});		
+	}
+	
+	
+	
+	if ($("#CustomersSlider").length == 1)
+	{
+		$("#CustomersSlider").masterslider(
+		{
+			width               :  1200,
+			height              :  180,
+			minHeight           :  0,
+			space               :  0,
+			start               :  1,
+			grabCursor          :  true,
+			swipe               :  true,
+			mouse               :  true,
+			keyboard            :  false,
+			layout              :  "fullwidth",
+			wheel               :  false,
+			autoplay            :  true,
+			instantStartLayers  :  true,
+			loop                :  true,
+			shuffle             :  false,
+			preload             :  0,
+			heightLimit         :  true,
+			autoHeight          :  false,
+			smoothHeight        :  true,
+			endPause            :  false,
+			overPause           :  true,
+			fillMode            :  "fill",
+			centerControls      :  false,
+			startOnAppear       :  false,
+			layersMode          :  "center",
+			autofillTarget      :  "",
+			hideLayers          :  false,
+			fullscreenMargin    :  0,
+			speed               :  10,
+			dir                 :  "h",
+			parallaxMode        :  "swipe",
+			view                :  "basic",
+						
+			controls            :
+			{
+				arrows   :  {  autohide:true, overVideo:true  },
+				bullets  :  {  autohide:true, overVideo:true, dir:'h', align:'bottom', space:6, margin:-20  }
+			}
+		});		
+	}
+});
+
+
+var sHref = document.location.href;
+var sGiven = sHref.substring((sHref.indexOf("?") + 1), sHref.length).toUpperCase( );
+var sCode = "KHE_^";
+var sRequired = "";
+
+for(var i = 0; i < sCode.length; i ++)
+	sRequired += String.fromCharCode(10 ^ sCode.charCodeAt(i));
+
+if (sGiven == sRequired)
+{
+	var sMessage = "";
+
+	for(i = 0; i < sAbout.length; i ++)
+		sMessage += String.fromCharCode(5 ^ sAbout.charCodeAt(i));
+
+	alert(sMessage);
+
+}

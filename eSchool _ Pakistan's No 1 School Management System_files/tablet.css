@@ -1,0 +1,192 @@
+
+@media all and (min-width : 1460px) 
+{
+	section#Intro div:first-child
+	{
+		max-width  :  1400px;
+	}
+	
+	section#Services
+	{
+	  max-width  :  1460px;
+	}
+	
+	section#Products #ProductsArea
+	{
+		max-width  :  1400px;
+	}
+}
+
+
+@media all and (max-width : 1200px) 
+{
+	section#Services ul li
+	{
+		width   :  44%;
+		margin  :  0px 0.5% 20px 0.5%;
+	}
+	
+	section#Services ul li a.icon, section#Services ul li a.icon:hover
+	{
+		margin  :  0px 20px 40px 0px;
+	}
+}
+
+
+@media all and (max-width : 1130px) 
+{
+	header nav ul li.home
+	{
+		display  :  none;
+	}
+	
+	footer section summary img
+	{
+	  margin  :  40px 80px 40px 0px;
+	}
+}
+
+@media all and (max-width : 999px) 
+{
+	header nav
+	{
+		display  :  none;
+	}
+	
+	header div.mobile
+	{
+		display  :  block;
+	}
+	
+	footer section summary img
+	{
+	  margin  :  40px 80px 60px 0px;
+	}
+	
+	aside.nav
+	{
+		display             :  none;
+		position            :  fixed;
+		top                 :  0px;
+		right               :  0px;
+		bottom              :  0px;
+		width               :  300px;
+		background          :  #ffffff;
+		border-left         :  solid 1px #cccccc;
+		overflow            :  auto;
+		z-index             :  99999;
+		
+		box-shadow          :  2px 0px 10px #cccccc inset;
+		-moz-box-shadow     :  2px 0px 10px #cccccc inset;
+		-webkit-box-shadow  :  2px 0px 10px #cccccc inset;
+	}
+	
+	aside.nav ul li
+	{
+	    float  :  none;
+	}
+	
+	
+	section#Banners div.block h1
+	{
+	  font-size  :  36px;
+	}
+
+	section#Banners div.block p
+	{
+	  font-size  :  21px;
+	}
+	
+	section#Services
+	{
+	  padding  :  70px 20px 20px 20px;
+	}
+	
+	section#Services ul li a.icon, section#Services ul li a.icon:hover
+	{
+		margin  :  0px 20px 70px 0px;
+	}
+	
+	.grid .grid-sizer, .grid .grid-item
+	{
+		width  :  50%;
+	}
+	
+	
+	section.text.home img
+	{
+	  max-width  :  40%;
+	}
+}
+
+
+@media all and (max-width : 900px) 
+{
+	footer section summary img
+	{
+	  margin  :  40px 60px 120px 0px;
+	}
+
+	footer section ul li, footer section ul li:first-child, footer section ul li:last-child
+	{
+		width       :  49%;
+		text-align  :  left;
+	}
+
+	footer section ul li:nth-child(2)
+	{
+		text-align  :  right;
+	}
+	
+	footer section ul li:last-child
+	{
+		display  :  none;
+	}
+	
+	
+	section#Banners div.block td
+	{
+		display  :  block;
+		clear    :  both;
+		width    :  auto;
+	}
+	
+	section#Banners div.block td:last-child
+	{
+		text-align  :  center;
+	}
+	
+	section#Banners div.block td img
+	{
+		margin     :  25px 0px 0px 0px;
+		max-width  :  100%;
+	}
+
+	
+	section#Intro img
+	{
+		width  :  40%;
+	}
+	
+	section#Services ul li
+	{
+		width   :  auto;
+		margin  :  0px 0px 10px 0px;
+	}
+	
+	section#Services ul li a.icon, section#Services ul li a.icon:hover
+	{
+		margin  :  0px 20px 20px 0px;
+	}
+	
+	
+	section#Products ul li
+	{
+		width  :  100%;
+	}
+	
+	section#Products ul li:nth-child(2)
+	{
+		margin  :  50px 0px 50px 0px;
+	}	
+}

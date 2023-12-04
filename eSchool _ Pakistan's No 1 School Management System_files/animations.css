@@ -1,0 +1,28 @@
+
+@-webkit-keyframes animate
+{
+  0%   { background-position : 0px 5px; }
+  50%  { background-position : 0px 0px; }
+  100% { background-position : 0px 5px; }
+}
+
+@-moz-keyframes animate
+{
+  0%   { background-position : 0px 5px; }
+  50%  { background-position : 0px 0px; }
+  100% { background-position : 0px 5px; }
+}
+
+@-o-keyframes animate
+{
+  0%   { background-position : 0px 5px; }
+  50%  { background-position : 0px 0px; }
+  100% { background-position : 0px 5px; }
+}
+
+@keyframes animate
+{
+  0%   { background-position : 0px 5px; }
+  50%  { background-position : 0px 0px; }
+  100% { background-position : 0px 5px; }
+}
